@@ -163,9 +163,15 @@ export const portfolio: Portfolio = {
   ],
   experience: [
     {
+      company: 'Josh Bauer Team',
+      role: 'Mobile/Web Developer',
+      dates: 'Jan 2026 – Present',
+      bullets: ['TODO: 1–2 bullets on what Jonah built.'],
+    },
+    {
       company: 'ENRG Inc.',
       role: 'Full-Stack & Mobile Developer (consulting)',
-      dates: 'TODO dates – Present',
+      dates: 'Jan 2026 – Present',
       bullets: [
         "Migrated and modernized ENRG's systems: Laravel + Livewire web app, plus a Laravel + Next.js version.",
         'Built and maintain the ENRG Flutter app; handle build automation and distribution (Firebase, Play Store, App Store).',
@@ -181,7 +187,7 @@ export const portfolio: Portfolio = {
     {
       company: 'Envoc',
       role: 'Mobile Developer (consulting)',
-      dates: 'TODO – Present (~8 months)',
+      dates: 'Jan 2026 – Present',
       bullets: [
         'Builds native iOS (SwiftUI) and Android (Kotlin) applications.',
         'Built FaceLock Authenticator, an iOS app for liveness-based MFA on Microsoft Entra ID, and FaceLock Reader, an iOS app that checks a FaceLock QR credential and the person’s face.',
@@ -190,34 +196,49 @@ export const portfolio: Portfolio = {
     {
       company: 'nSmarTrac LLC',
       role: 'Full-Stack & Mobile Developer',
-      dates: '6 years, TODO dates',
+      dates: 'May 2020 – Nov 2025',
       bullets: [
         'Completed the nSmarTrac CRM, including its native mobile app; later converted the app to Flutter.',
         'Real-time technician location tracking with GPS and Google Maps SDK.',
       ],
     },
     {
+      company: 'HRPayPortal',
+      role: 'Senior Mobile App Developer',
+      dates: 'Jan 2024 – Nov 2024',
+      bullets: ['Mobile development for the HIRS Platform.'],
+    },
+    {
       company: 'Cazamio',
-      role: 'TODO role',
-      dates: 'TODO dates',
-      bullets: ['TODO: 1–2 bullets on what Jonah built. Jira-based workflow.'],
+      role: 'iOS App Developer',
+      dates: 'Dec 2017 – Jun 2018',
+      bullets: [
+        'iOS development for Apply by Cazamio, a rental application app for New York City agents.',
+        'Tenants apply, upload documents, and pay for a credit report. The agent downloads a landlord-ready package at no cost.',
+      ],
     },
     {
       company: 'DocHQ',
-      role: 'TODO role',
+      role: 'Mobile App Developer',
       dates: 'TODO dates',
-      bullets: ['TODO: 1–2 bullets on what Jonah built.'],
+      bullets: [
+        'Mobile app development for DocHQ, a digital physiotherapy platform for muscle and joint care.',
+        'Remote chartered physios, motion tracking, prevention plans, and fitness programs.',
+      ],
     },
     {
       company: 'FlexBooker',
       role: 'TODO role',
-      dates: 'TODO dates',
-      bullets: ['TODO: 1–2 bullets on what Jonah built.'],
+      dates: 'Jan 2017 – Nov 2017',
+      bullets: [
+        'Online booking and scheduling software. Customers book from the website or phone, and the system confirms the appointment and sends email and text reminders.',
+        'Booking pages, intake forms, waitlists, online payments, and calendar sync with Google, Microsoft 365, Outlook, and Apple.',
+      ],
     },
     {
       company: 'Web2Application',
       role: 'Developer',
-      dates: 'TODO dates',
+      dates: 'Jun 2018 – May 2025',
       bullets: [
         'Developed Shopify plugins; implemented maps/geolocation features; Hebrew/RTL development; handled Level 1–5 support escalations.',
       ],
@@ -225,7 +246,7 @@ export const portfolio: Portfolio = {
     {
       company: 'ConfigureTerminal',
       role: 'Developer',
-      dates: 'TODO dates',
+      dates: 'Sep 2010 – Nov 2018',
       bullets: ['Handled Level 1–5 support escalations; Jira-based workflow.'],
     },
     {
@@ -249,6 +270,30 @@ export const portfolio: Portfolio = {
       links: [{ label: 'new-live.enrg.pro', href: 'https://new-live.enrg.pro' }],
     },
     {
+      id: 'enrg-ios',
+      title: 'ENRG Connect',
+      summary:
+        'iOS app for ENRG members to pass and track referrals, open the member directory, and follow mastermind work. Login is limited to active members.',
+      tags: ['iOS', 'Referrals', 'Networking'],
+      categories: ['mobile'],
+      featured: false,
+      inProgress: false,
+      image: '/images/projects/enrg-ios.webp',
+      links: [{ label: 'App Store', href: 'https://apps.apple.com/app/enrg-connect/id6788059346' }],
+    },
+    {
+      id: 'enrg-android',
+      title: 'ENRG Android',
+      summary:
+        'Android app for ENRG members to pass and track referrals, open the member directory, and follow mastermind work. Login is limited to active members.',
+      tags: ['Android', 'Referrals', 'Networking'],
+      categories: ['mobile'],
+      featured: false,
+      inProgress: false,
+      image: '/images/projects/enrg-android.webp',
+      links: [{ label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=pro.enrg.mobile' }],
+    },
+    {
       id: 'nsmartrac',
       title: 'nSmarTrac CRM & Field App',
       summary:
@@ -259,6 +304,18 @@ export const portfolio: Portfolio = {
       inProgress: false,
       image: '/images/projects/nsmartrac.webp',
       links: [{ label: 'nsmartrac.com', href: 'https://nsmartrac.com' }],
+    },
+    {
+      id: 'nsmartrac-ios',
+      title: 'nSmarTrac iOS',
+      summary:
+        'iOS field app for the nSmarTrac CRM. Techs collect payments, accept appointments, and write estimates, invoices, and inventory updates on site.',
+      tags: ['iOS', 'CRM', 'Field service'],
+      categories: ['mobile'],
+      featured: false,
+      inProgress: false,
+      image: '/images/projects/nsmartrac-ios.webp',
+      links: [{ label: 'App Store', href: 'https://apps.apple.com/app/nsmartrac/id1517179104' }],
     },
     {
       id: 'lead-gen',
@@ -285,6 +342,23 @@ export const portfolio: Portfolio = {
       links: [{ label: 'App Store', href: 'https://apps.apple.com/app/facelock-authenticator/id6771837274' }],
     },
     {
+      id: 'facelock-authenticator-android',
+      title: 'FaceLock Authenticator Android',
+      summary:
+        'Android app for liveness-based MFA on Microsoft Entra ID. A 3D face scan and a push challenge confirm the person is present.',
+      tags: ['Android', 'FaceTec', 'Microsoft Entra ID'],
+      categories: ['mobile'],
+      featured: false,
+      inProgress: false,
+      image: '/images/projects/facelock-authenticator-android.webp',
+      links: [
+        {
+          label: 'Google Play',
+          href: 'https://play.google.com/store/apps/details?id=id.facelock.authenticator',
+        },
+      ],
+    },
+    {
       id: 'facelock-reader',
       title: 'FaceLock Reader',
       summary:
@@ -295,6 +369,18 @@ export const portfolio: Portfolio = {
       inProgress: false,
       image: '/images/projects/facelock-reader.webp',
       links: [{ label: 'App Store', href: 'https://apps.apple.com/app/facelock-reader/id6757082971' }],
+    },
+    {
+      id: 'facelock-reader-android',
+      title: 'FaceLock Reader Android',
+      summary:
+        'Android app that scans a FaceLock QR code, on screen or printed, and checks that the credential is genuine and the face matches. Validation works offline.',
+      tags: ['Android', 'QR', 'Biometrics'],
+      categories: ['mobile'],
+      featured: false,
+      inProgress: false,
+      image: '/images/projects/facelock-reader-android.webp',
+      links: [{ label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=id.facelock.reader' }],
     },
     {
       id: 'web2application',
@@ -336,7 +422,7 @@ export const portfolio: Portfolio = {
       id: 'dochq',
       title: 'DocHQ',
       summary:
-        'Digital physiotherapy platform for muscle and joint care, with remote chartered physios, motion tracking, prevention, and fitness programs.',
+        'Digital physiotherapy for muscle and joint care. Remote chartered physios, motion tracking, prevention plans, and fitness programs.',
       tags: ['Health', 'Physiotherapy', 'Motion tracking'],
       categories: ['web'],
       featured: false,
@@ -346,15 +432,21 @@ export const portfolio: Portfolio = {
     },
     {
       id: 'cazamio',
-      title: 'Cazamio',
+      title: 'Apply by Cazamio',
       summary:
-        'Rental platform for brokerages and property managers: buildings, listings, applications, leases, screening, and e-sign.',
-      tags: ['Real Estate', 'Leases', 'CRM'],
-      categories: ['web'],
+        'Android app for New York City agents. Tenants apply, upload documents, and pay for a credit report. The agent downloads a landlord-ready package at no cost.',
+      tags: ['Android', 'Rentals', 'NYC'],
+      categories: ['mobile'],
       featured: false,
       inProgress: false,
       image: '/images/projects/cazamio.webp',
-      links: [{ label: 'cazamio.com', href: 'https://www.cazamio.com/' }],
+      links: [
+        {
+          label: 'Google Play',
+          href: 'https://play.google.com/store/apps/details?id=com.cazamio.apply',
+        },
+        { label: 'applybycazamio.com', href: 'https://applybycazamio.com/' },
+      ],
     },
     {
       id: 'cleanwaterstore',
@@ -379,6 +471,18 @@ export const portfolio: Portfolio = {
       inProgress: false,
       image: '/images/projects/buyisrael.webp',
       links: [{ label: 'buyinisrael.co.il', href: 'https://buyinisrael.co.il' }],
+    },
+    {
+      id: 'benefact',
+      title: 'Benefact Financial',
+      summary:
+        'Independent insurance brokerage site for individual health, Medicare, life, supplemental, and employer benefits, with online quote forms.',
+      tags: ['Insurance', 'Medicare', 'Benefits'],
+      categories: ['web'],
+      featured: false,
+      inProgress: false,
+      image: '/images/projects/benefact.webp',
+      links: [{ label: 'benefactfinancial.com', href: 'https://www.benefactfinancial.com/' }],
     },
     {
       id: 'school',

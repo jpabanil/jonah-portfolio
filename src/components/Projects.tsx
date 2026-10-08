@@ -4,13 +4,14 @@ import {
   ExternalLink,
   GraduationCap,
   HeartPulse,
-  KeyRound,
   Languages,
   Layers,
   LockKeyhole,
   Radar,
   ScanFace,
+  Shield,
   ShoppingBag,
+  Smartphone,
   Stethoscope,
   Terminal,
   Workflow,
@@ -41,9 +42,21 @@ const visuals: Record<string, { icon: typeof Layers; wash: string }> = {
     icon: Layers,
     wash: 'radial-gradient(circle at 18% 20%, rgba(34,211,238,0.55), transparent 52%), linear-gradient(155deg, #101828, #1e1b4b)',
   },
+  'enrg-ios': {
+    icon: Smartphone,
+    wash: 'radial-gradient(circle at 20% 18%, rgba(34,211,238,0.5), transparent 48%), linear-gradient(160deg, #0f172a, #164e63)',
+  },
+  'enrg-android': {
+    icon: Smartphone,
+    wash: 'radial-gradient(circle at 78% 22%, rgba(52,211,153,0.45), transparent 48%), linear-gradient(160deg, #052e16, #111827)',
+  },
   nsmartrac: {
     icon: Radar,
     wash: 'radial-gradient(circle at 80% 16%, rgba(129,140,248,0.55), transparent 48%), linear-gradient(160deg, #121826, #0f2744)',
+  },
+  'nsmartrac-ios': {
+    icon: Smartphone,
+    wash: 'radial-gradient(circle at 24% 20%, rgba(129,140,248,0.5), transparent 48%), linear-gradient(160deg, #172554, #111827)',
   },
   'lead-gen': {
     icon: Workflow,
@@ -53,9 +66,17 @@ const visuals: Record<string, { icon: typeof Layers; wash: string }> = {
     icon: LockKeyhole,
     wash: 'radial-gradient(circle at 22% 18%, rgba(34,211,238,0.45), transparent 48%), linear-gradient(160deg, #111827, #1e1b4b)',
   },
+  'facelock-authenticator-android': {
+    icon: LockKeyhole,
+    wash: 'radial-gradient(circle at 75% 20%, rgba(52,211,153,0.42), transparent 48%), linear-gradient(160deg, #052e16, #1e1b4b)',
+  },
   'facelock-reader': {
     icon: ScanFace,
     wash: 'radial-gradient(circle at 78% 24%, rgba(129,140,248,0.5), transparent 46%), linear-gradient(160deg, #0f172a, #312e81)',
+  },
+  'facelock-reader-android': {
+    icon: ScanFace,
+    wash: 'radial-gradient(circle at 22% 78%, rgba(52,211,153,0.4), transparent 48%), linear-gradient(160deg, #042f2e, #312e81)',
   },
   web2application: {
     icon: ShoppingBag,
@@ -74,7 +95,7 @@ const visuals: Record<string, { icon: typeof Layers; wash: string }> = {
     wash: 'radial-gradient(circle at 24% 24%, rgba(244,114,182,0.42), transparent 48%), linear-gradient(160deg, #1f1320, #132033)',
   },
   cazamio: {
-    icon: KeyRound,
+    icon: Smartphone,
     wash: 'radial-gradient(circle at 80% 70%, rgba(129,140,248,0.45), transparent 48%), linear-gradient(160deg, #121826, #312e81)',
   },
   cleanwaterstore: {
@@ -84,6 +105,10 @@ const visuals: Record<string, { icon: typeof Layers; wash: string }> = {
   buyisrael: {
     icon: Languages,
     wash: 'radial-gradient(circle at 75% 25%, rgba(129,140,248,0.45), transparent 46%), linear-gradient(160deg, #111827, #1e1b4b)',
+  },
+  benefact: {
+    icon: Shield,
+    wash: 'radial-gradient(circle at 22% 20%, rgba(52,211,153,0.4), transparent 48%), linear-gradient(160deg, #10221c, #111827)',
   },
   school: {
     icon: GraduationCap,

@@ -135,32 +135,39 @@ Side card in About: photo (`/images/jonah.jpeg`, fallback to "JP" monogram gradi
 ### 4.5 Experience (vertical timeline, newest first)
 Dates and roles marked TODO must be filled in by the owner. Final order must be sorted by dates once the owner fills them in.
 
-1. **ENRG Inc.** — Full-Stack & Mobile Developer (consulting) · `TODO dates – Present`
+1. **Josh Bauer Team** — Mobile/Web Developer · `Jan 2026 – Present`
+   - `TODO: 1–2 bullets on what Jonah built.`
+2. **ENRG Inc.** — Full-Stack & Mobile Developer (consulting) · `Jan 2026 – Present`
    - Migrated and modernized ENRG's systems: Laravel + Livewire web app, plus a Laravel + Next.js version.
    - Built and maintain the ENRG Flutter app; handle build automation and distribution (Firebase, Play Store, App Store).
    - Building campaign automations (n8n, Make.com, Notion) that find business leads, send outreach, and book calls, surfaced in the superadmin and licensee dashboards.
-2. **Halloyi Automobile** — Backend Developer & Team Lead · `TODO dates – Present`
+3. **Halloyi Automobile** — Backend Developer & Team Lead · `TODO dates – Present`
    - Voted team leader by a 3-person development team; owns backend development.
-3. **Envoc** — Mobile Developer (consulting) · `TODO – Present (~8 months)`
+4. **Envoc** — Mobile Developer (consulting) · `Jan 2026 – Present`
    - Builds native iOS (SwiftUI) and Android (Kotlin) applications.
    - Built FaceLock Authenticator, an iOS app for liveness-based MFA on Microsoft Entra ID, and FaceLock Reader, an iOS app that checks a FaceLock QR credential and the person’s face. FaceLock is an Envoc project, not a separate employer.
-4. **nSmarTrac LLC** — Full-Stack & Mobile Developer · `6 years, TODO dates`
+5. **nSmarTrac LLC** — Full-Stack & Mobile Developer · `May 2020 – Nov 2025`
    - Completed the nSmarTrac CRM, including its native mobile app; later converted the app to Flutter.
    - Real-time technician location tracking with GPS and Google Maps SDK.
-5. **Cazamio** — `TODO role` · `TODO dates`
-   - `TODO: 1–2 bullets on what Jonah built.` Jira-based workflow.
-6. **DocHQ** — `TODO role` · `TODO dates`
-   - `TODO: 1–2 bullets on what Jonah built.`
-7. **FlexBooker** — `TODO role` · `TODO dates`
-   - `TODO: 1–2 bullets on what Jonah built.`
-8. **Web2Application** — Developer · `TODO dates`
+6. **HRPayPortal** — Senior Mobile App Developer · `Jan 2024 – Nov 2024`
+   - Mobile development for the HIRS Platform.
+7. **Cazamio** — iOS App Developer · `Dec 2017 – Jun 2018`
+   - iOS development for Apply by Cazamio, a rental application app for New York City agents.
+   - Tenants apply, upload documents, and pay for a credit report. The agent downloads a landlord-ready package at no cost.
+8. **DocHQ** — Mobile App Developer · `TODO dates`
+   - Mobile app development for DocHQ, a digital physiotherapy platform for muscle and joint care.
+   - Remote chartered physios, motion tracking, prevention plans, and fitness programs.
+9. **FlexBooker** — `TODO role` · `Jan 2017 – Nov 2017`
+   - Online booking and scheduling software. Customers book from the website or phone, and the system confirms the appointment and sends email and text reminders.
+   - Booking pages, intake forms, waitlists, online payments, and calendar sync with Google, Microsoft 365, Outlook, and Apple.
+10. **Web2Application** — Developer · `Jun 2018 – May 2025`
    - Developed Shopify plugins; implemented maps/geolocation features; Hebrew/RTL development; handled Level 1–5 support escalations.
-9. **ConfigureTerminal** — Developer · `TODO dates`
+11. **ConfigureTerminal** — Developer · `Sep 2010 – Nov 2018`
     - Handled Level 1–5 support escalations; Jira-based workflow.
-10. **Clean Water Store** — Web Developer · `~2014 – ~2017`
+12. **Clean Water Store** — Web Developer · `~2014 – ~2017`
     - Built cleanwaterstore.com from scratch; backend and frontend development for ~3 years.
 
-### 4.6 Projects (card grid, 14 cards — renumber sequentially in the data file)
+### 4.6 Projects (card grid, 20 cards — renumber sequentially in the data file)
 Each card: image (or gradient placeholder with icon), title, one-line problem/solution, tech tags, `category` (`web` | `mobile` | `automation`, can be an array), optional "Live" / "Case study" links. Featured projects get a larger card.
 
 1. **ENRG Platform Modernization** *(featured)* — Membership site for the Executive Networking Referral Group: find a group, find a professional, or start a group. Rebuilt as a Laravel app with a Flutter companion and automated store releases. Tags: Laravel, Livewire, Next.js, Flutter, Firebase. Category: web, mobile. Live: `https://new-live.enrg.pro`.
@@ -171,12 +178,18 @@ Each card: image (or gradient placeholder with icon), title, one-line problem/so
 6. **Web2Application** — Turns a mobile-friendly website into Android and iOS apps with native shells, push notifications, and deep links. Work here included a Shopify plugin, maps, and Hebrew/RTL. Tags: Android, iOS, Shopify, Hebrew/RTL. Category: web. Live: `https://web2application.com/`.
 7. **ConfigureTerminal** — On-demand IT training site for networking professionals, with self-paced Cisco, Linux, Python, and Ansible courses. Tags: IT Training, Cisco, Python. Category: web. Live: `https://www.configureterminal.com/`.
 8. **FlexBooker** — Online appointment scheduling. Customers book on the web or phone, get reminders, pay online, and sync with Google, Microsoft, or Apple calendars. Tags: Scheduling, Payments, Calendar. Category: web. Live: `https://flexbooker.com/`.
-9. **DocHQ** — Digital physiotherapy platform for muscle and joint care, with remote chartered physios, motion tracking, prevention, and fitness programs. Tags: Health, Physiotherapy, Motion tracking. Category: web. Live: `https://dochq.co.uk/`.
-10. **Cazamio** — Rental platform for brokerages and property managers: buildings, listings, applications, leases, screening, and e-sign. Tags: Real Estate, Leases, CRM. Category: web. Live: `https://www.cazamio.com/`.
+9. **DocHQ** — Digital physiotherapy for muscle and joint care. Remote chartered physios, motion tracking, prevention plans, and fitness programs. Tags: Health, Physiotherapy, Motion tracking. Category: web. Live: `https://dochq.co.uk/`.
+10. **Apply by Cazamio** — Android app for New York City agents. Tenants apply, upload documents, and pay for a credit report. The agent downloads a landlord-ready package at no cost. Tags: Android, Rentals, NYC. Category: mobile. Google Play: `https://play.google.com/store/apps/details?id=com.cazamio.apply`. Site: `https://applybycazamio.com/`.
 11. **cleanwaterstore.com** — Store for whole-home water treatment: well and city filters, softeners, test kits, and a treatment quiz. Built from scratch over about three years. Tags: PHP, MySQL, JavaScript. Category: web. Live: `https://cleanwaterstore.com`.
 12. **buyinisrael.co.il** — Hebrew marketplace where shoppers buy from verified Israeli stores and get an extra discount at checkout. Built from scratch with a right-to-left interface. Live: `https://buyinisrael.co.il`. Tags: PHP, MySQL, JavaScript, Hebrew/RTL. Category: web.
-13. **School Management System** *(in progress)* — Five role-based dashboards for schools, with a Flutter companion app. Tags: Laravel, Inertia, React, MongoDB, Flutter. Category: web, mobile.
-14. **Clinic Patient Records App** *(in progress)* — Digital patient records for doctors and clinics. Tags: `TODO stack`. Category: `TODO`.
+13. **Benefact Financial** — Independent insurance brokerage site for individual health, Medicare, life, supplemental, and employer benefits, with online quote forms. Tags: Insurance, Medicare, Benefits. Category: web. Live: `https://www.benefactfinancial.com/`.
+14. **School Management System** *(in progress)* — Five role-based dashboards for schools, with a Flutter companion app. Tags: Laravel, Inertia, React, MongoDB, Flutter. Category: web, mobile.
+15. **Clinic Patient Records App** *(in progress)* — Digital patient records for doctors and clinics. Tags: `TODO stack`. Category: `TODO`.
+16. **ENRG Connect** — iOS app for ENRG members to pass and track referrals, open the member directory, and follow mastermind work. Tags: iOS, Referrals, Networking. Category: mobile. App Store: `https://apps.apple.com/app/enrg-connect/id6788059346`.
+17. **ENRG Android** — Android app for ENRG members to pass and track referrals, open the member directory, and follow mastermind work. Tags: Android, Referrals, Networking. Category: mobile. Google Play: `https://play.google.com/store/apps/details?id=pro.enrg.mobile`.
+18. **nSmarTrac iOS** — iOS field app for the nSmarTrac CRM. Techs collect payments, accept appointments, and write estimates, invoices, and inventory updates on site. Tags: iOS, CRM, Field service. Category: mobile. App Store: `https://apps.apple.com/app/nsmartrac/id1517179104`.
+19. **FaceLock Authenticator Android** — Android app for liveness-based MFA on Microsoft Entra ID. Tags: Android, FaceTec, Microsoft Entra ID. Category: mobile. Google Play: `https://play.google.com/store/apps/details?id=id.facelock.authenticator`.
+20. **FaceLock Reader Android** — Android app that scans a FaceLock QR code and checks that the credential is genuine and the face matches, including offline. Tags: Android, QR, Biometrics. Category: mobile. Google Play: `https://play.google.com/store/apps/details?id=id.facelock.reader`.
 
 Do not invent metrics, client logos, or testimonials. Do not use other companies' logos or screenshots unless the owner supplies them. Leave a commented-out `testimonials` array in the data file for later.
 
@@ -255,7 +268,7 @@ Do not invent metrics, client logos, or testimonials. Do not use other companies
 ### 6.6 Projects (`#projects`)
 - Filter tabs: All · Web · Mobile · Automation (derive from the `category` field per project; a project with multiple categories appears under each).
 - Grid: featured cards span 2 columns on desktop.
-- With 14 cards, show the first 6 under "All" and a **Show more projects** button that reveals the rest. Filtered tabs show all matching projects.
+- With 20 cards, show the first 6 under "All" and a **Show more projects** button that reveals the rest. Filtered tabs show all matching projects.
 - Card hover: image zoom 1.05, show links.
 - Missing image → gradient placeholder with a lucide icon (no broken images).
 - Cards whose description is still `TODO` must render the placeholder visibly (styled, e.g. dashed border) so the owner spots them.
