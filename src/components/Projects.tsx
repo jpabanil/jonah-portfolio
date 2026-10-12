@@ -1,9 +1,12 @@
 import {
+  Bike,
+  Building,
   CalendarClock,
   Droplets,
   ExternalLink,
   GraduationCap,
   HeartPulse,
+  IdCard,
   Languages,
   Layers,
   LockKeyhole,
@@ -117,6 +120,18 @@ const visuals: Record<string, { icon: typeof Layers; wash: string }> = {
   clinic: {
     icon: Stethoscope,
     wash: 'radial-gradient(circle at 24% 24%, rgba(244,114,182,0.4), transparent 48%), linear-gradient(160deg, #1f1320, #132033)',
+  },
+  'delivery-food-ride': {
+    icon: Bike,
+    wash: 'radial-gradient(circle at 78% 22%, rgba(251,191,36,0.42), transparent 48%), linear-gradient(160deg, #1c1917, #134e4a)',
+  },
+  hris: {
+    icon: IdCard,
+    wash: 'radial-gradient(circle at 22% 20%, rgba(129,140,248,0.48), transparent 48%), linear-gradient(160deg, #172554, #111827)',
+  },
+  'elite-erp': {
+    icon: Building,
+    wash: 'radial-gradient(circle at 24% 78%, rgba(212,175,55,0.4), transparent 48%), linear-gradient(160deg, #1c1917, #134e4a)',
   },
 }
 
@@ -234,6 +249,13 @@ export function Projects() {
                       <p className="mt-2 text-muted">
                         <TodoText value={project.summary} />
                       </p>
+                      {project.details && project.details.length > 0 ? (
+                        <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted">
+                          {project.details.map((line) => (
+                            <li key={line}>{line}</li>
+                          ))}
+                        </ul>
+                      ) : null}
                       <ul className="mt-4 flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
                           <li key={tag}>

@@ -27,6 +27,8 @@ export interface Project {
   id: string
   title: string
   summary: string
+  /** Capability lines under the summary, for a project that needs more than one paragraph. */
+  details?: string[]
   tags: string[]
   /** Drives the Web / Mobile / Automation filters. A build can sit in more than one. Leave this empty while the category is still unknown. */
   categories: ProjectCategory[]
@@ -505,6 +507,73 @@ export const portfolio: Portfolio = {
       featured: false,
       inProgress: true,
       image: 'TODO: /images/projects/clinic.webp',
+      links: [],
+    },
+    {
+      id: 'delivery-food-ride',
+      title: 'Delivery, Food & Ride',
+      summary:
+        'On-demand platform for motorcycle rides, parcels, restaurant food, and pabili (buy it for me). Customers and drivers use Flutter apps. Merchants, admins, and a super admin share one Laravel portal, with live dispatch and tracking.',
+      details: [
+        'Ride is one passenger on a motorcycle. Parcel is a pickup and drop-off, with optional cash collection on delivery. Food is an order from one registered merchant, with menu options, a minimum order, and a delivery radius. Pabili is a shopping list: the driver buys the items with their own cash, and the customer pays the item cost plus the delivery and shopping fees in cash on arrival.',
+        'Sign-in is a phone number and a one-time code. Both apps record consent for the Philippine Data Privacy Act and include account deletion. Apple and Google review logins stay behind a config flag.',
+        'Dispatch offers each job to the nearest online driver, then the next driver after a short timeout. A food order also waits for the merchant to accept and uses a pickup code. Drivers with a negative wallet do not receive cash jobs.',
+        'The customer watches the trip live, can share a read-only trip link, and sees the driver name, photo, and plate. An SOS button alerts the admin map with the live location.',
+        'Fares combine base, distance, waiting time, night, and surge. Amounts are stored as integer centavos. Settlement is cash on delivery and a driver wallet, written to an append-only ledger. Pabili item cost is a pass-through and does not earn commission. A receipt photo is required before a pabili order can be marked purchased, and a purchase over the budget waits for the customer to approve it.',
+        'The admin portal approves driver documents and merchants, edits fare rules, service areas, banned items, and promos, and handles payouts, cash-in with proof photos, support tickets, and reports. The merchant portal covers hours, the menu, sold-out items, and incoming orders.',
+        'The stack is Laravel 13, MongoDB, Inertia and React, Laravel Reverb, and two Flutter apps. Maps use Google Maps. Push uses Firebase Cloud Messaging. Online payments sit behind a gateway interface so GCash and Maya can be added later.',
+      ],
+      tags: ['Laravel', 'Inertia', 'React', 'MongoDB', 'Flutter'],
+      categories: ['web', 'mobile'],
+      featured: false,
+      inProgress: true,
+      image: 'TODO: /images/projects/delivery-food-ride.webp',
+      links: [],
+    },
+    {
+      id: 'hris',
+      title: 'HRIS',
+      summary:
+        'Multi-company human resource information system for Philippine employers. It follows an employee from hiring through payroll, separation, and year-end government filings. A Laravel API serves a Next.js admin console and an installable employee portal.',
+      details: [
+        'Organization structure and org chart, 201 files, company assets, and documents. Government IDs, bank accounts, and salary history are encrypted. A compensation change is stored as a new history row.',
+        'Manpower requisitions, a public careers page, applicant tracking, interview scorecards, and job offers. Hiring an applicant creates the employee record and starts an onboarding checklist.',
+        'Work schedules, shifts, rosters, and holidays that can apply nationwide or to one city. Employees clock in from the portal, a kiosk, or an imported biometric log, with an optional geofence and selfie. Overtime, official business, work from home, and attendance corrections go through approval.',
+        'Leave types start from Philippine defaults, including service incentive leave, vacation, sick, maternity, paternity, solo parent, VAWC, and special leave for women. Each company can change entitlements, accrual, carry-over, and conversion to cash. Balances come from a ledger of accruals, usage, and adjustments.',
+        'Payroll runs for weekly, semi-monthly, and monthly groups. A run computes basic pay, allowances, overtime, night differential, SSS, PhilHealth, Pag-IBIG, withholding tax, loans, and cash advances. The person who computes a run cannot approve it. A back-dated salary change creates a retro adjustment into an already-paid period.',
+        'Year-end work produces BIR Form 2316, the alphalist export, 13th-month pay with proration for new and separated employees, and a remittance record per agency so contributions can be matched to proof of payment.',
+        'Benefits enrollment, including HMO dependent costs that feed payroll deductions. Performance reviews, goals, probation evaluations, training, training bonds, and licenses with expiry reminders.',
+        'Employee relations covers incident reports, a code of conduct, and disciplinary cases that follow twin-notice due process. Employees can file a grievance, including anonymously, and acknowledge company policies.',
+        'Offboarding covers resignation, clearance across IT, finance, admin, the manager, and HR, an exit interview, and final pay. Final pay includes unpaid salary, prorated 13th month, leave conversion, and tax, minus loans, advances, and unreturned accountabilities. After deactivation, the portal still serves payslips and Form 2316 for a set period.',
+        'One approval inbox covers leave, overtime, claims, payroll, profile updates, and the other modules, and an approver can delegate while they are away. HR edits notification templates and document templates, including a certificate of employment with a verification code.',
+        'Privacy tools record consent and handle access, correction, and erasure requests, with retention jobs, in line with the Data Privacy Act. Roles keep payroll separate from general HR, and an auditor role is read-only. Optional sign-in through Google Workspace or Microsoft 365.',
+      ],
+      tags: ['Laravel', 'Next.js', 'MySQL', 'Redis'],
+      categories: ['web'],
+      featured: false,
+      inProgress: true,
+      image: 'TODO: /images/projects/hris.webp',
+      links: [],
+    },
+    {
+      id: 'elite-erp',
+      title: 'Elite ERP',
+      summary:
+        'Integrated business system for Elite Ace Trading. One Laravel API and one MySQL database serve the web desks and a Flutter app for Android and iOS. The build covers CRM, sales, inventory, requisitions, people and payroll, projects, and internal chat. The finance ledger is the following phase.',
+      details: [
+        'A company has branches and warehouses, added in settings. Each person belongs to one or more companies and only sees those records. Twenty roles run from Super Admin to Employee. A sales officer sees only their own pipeline, clients, invoices, and payments. The lead pool stays shared. Salary is limited to the employee, HR, payroll, and authorized finance roles.',
+        'CRM keeps a shared lead pool and a private 15-stage pipeline, plus brochure and proposal queues, an appointment calendar, and a team dashboard with daily targets. Booking a lead creates the client and a draft proforma at the agreed price. Intro messages go out by SMS and email, and a reply of STOP opts the lead out.',
+        'Sales issues proforma invoices and acknowledgment receipts. The receipt carries a QR code that opens a public verify page, and a voided receipt shows VOID. The client signs on screen or with an uploaded copy before a payment is recorded. Bookkeeper, Finance Head, and President approve that payment in order, and the official balance updates only after the last approval. A release order prints only when the invoice is approved, paid in full, and verified.',
+        'Inventory computes stock from movements, prints barcode and QR labels, and builds a to-purchase list from low and critical items. That list becomes a requisition in one step. Requisitions pass an approval chain, then a voucher and a disbursement. Posted money records are voided or reversed, and document numbers are issued per company, document type, and year and are never reused.',
+        'People and payroll cover the 201 file, attendance, leave, overtime, daily time record corrections, and payslips. The HR manager approves a payroll run, and that approval opens a funding request for the net pay. Project monitoring follows production stages, each owned by a department, with updates posted from the web.',
+        'Internal chat, an approvals inbox, and notifications in the app and by email. Management, finance, and HR must use an authenticator at login, and the session ends after inactivity. Every change is written to an audit log that cannot be edited.',
+        'The phone app covers the lead pipeline, invoices and cash payments, approve and return, a stock board with barcode scan and purchase requests, leave, a payslip list, and chat. Warehouse receiving, production photos, and the finance ledger stay on the later plan.',
+      ],
+      tags: ['Laravel', 'Livewire', 'Flutter', 'MySQL'],
+      categories: ['web', 'mobile'],
+      featured: false,
+      inProgress: true,
+      image: 'TODO: /images/projects/elite-erp.webp',
       links: [],
     },
   ],

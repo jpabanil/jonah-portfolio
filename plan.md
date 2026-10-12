@@ -167,8 +167,8 @@ Dates and roles marked TODO must be filled in by the owner. Final order must be 
 12. **Clean Water Store** — Web Developer · `~2014 – ~2017`
     - Built cleanwaterstore.com from scratch; backend and frontend development for ~3 years.
 
-### 4.6 Projects (card grid, 20 cards — renumber sequentially in the data file)
-Each card: image (or gradient placeholder with icon), title, one-line problem/solution, tech tags, `category` (`web` | `mobile` | `automation`, can be an array), optional "Live" / "Case study" links. Featured projects get a larger card.
+### 4.6 Projects (card grid, 23 cards — renumber sequentially in the data file)
+Each card: image (or gradient placeholder with icon), title, one-line problem/solution, optional detail lines, tech tags, `category` (`web` | `mobile` | `automation`, can be an array), optional "Live" / "Case study" links. Featured projects get a larger card.
 
 1. **ENRG Platform Modernization** *(featured)* — Membership site for the Executive Networking Referral Group: find a group, find a professional, or start a group. Rebuilt as a Laravel app with a Flutter companion and automated store releases. Tags: Laravel, Livewire, Next.js, Flutter, Firebase. Category: web, mobile. Live: `https://new-live.enrg.pro`.
 2. **nSmarTrac CRM & Field App** *(featured)* — Field-service CRM for scheduling, estimates, invoices, payments, inventory, and eSign, with GPS tracking. Native iOS and Android apps were later moved to Flutter. Tags: Laravel, iOS, Android, Flutter, Google Maps SDK. Category: web, mobile. Live: `https://nsmartrac.com`.
@@ -190,6 +190,9 @@ Each card: image (or gradient placeholder with icon), title, one-line problem/so
 18. **nSmarTrac iOS** — iOS field app for the nSmarTrac CRM. Techs collect payments, accept appointments, and write estimates, invoices, and inventory updates on site. Tags: iOS, CRM, Field service. Category: mobile. App Store: `https://apps.apple.com/app/nsmartrac/id1517179104`.
 19. **FaceLock Authenticator Android** — Android app for liveness-based MFA on Microsoft Entra ID. Tags: Android, FaceTec, Microsoft Entra ID. Category: mobile. Google Play: `https://play.google.com/store/apps/details?id=id.facelock.authenticator`.
 20. **FaceLock Reader Android** — Android app that scans a FaceLock QR code and checks that the credential is genuine and the face matches, including offline. Tags: Android, QR, Biometrics. Category: mobile. Google Play: `https://play.google.com/store/apps/details?id=id.facelock.reader`.
+21. **Delivery, Food & Ride** *(in progress)* — On-demand platform for motorcycle rides, parcels, restaurant food, and pabili. Customers and drivers use Flutter apps. Merchants, admins, and a super admin share one Laravel portal, with live dispatch and tracking. Detail lines cover the four services, OTP and privacy consent, nearest-driver dispatch, live tracking and SOS, centavo fares and the wallet ledger, the admin and merchant portals, and the stack (Laravel 13, MongoDB, Inertia, React, Reverb, Flutter, Google Maps, Firebase). No public URL. Tags: Laravel, Inertia, React, MongoDB, Flutter. Category: web, mobile.
+22. **HRIS** *(in progress)* — Multi-company human resource information system for Philippine employers, from hiring through payroll, separation, and year-end filings. A Laravel API serves a Next.js admin console and an installable employee portal. Detail lines cover the 201 file, recruitment, attendance, Philippine leave defaults, payroll with separation of duties, BIR 2316 and remittances, benefits and performance, discipline, offboarding and final pay, the shared approval inbox, and Data Privacy Act tooling. No public URL. Tags: Laravel, Next.js, MySQL, Redis. Category: web.
+23. **Elite ERP** *(in progress)* — Integrated business system for Elite Ace Trading. One Laravel API and one MySQL database serve the web desks and a Flutter app for Android and iOS. CRM, sales, inventory, requisitions, people and payroll, projects, and internal chat are in this phase. The finance ledger follows. Detail lines cover company and role scope, the 15-stage pipeline, proforma and three-level payment approval, stock and requisitions, payroll funding, chat and two-factor login, and what the phone app includes. No public URL. Tags: Laravel, Livewire, Flutter, MySQL. Category: web, mobile.
 
 Do not invent metrics, client logos, or testimonials. Do not use other companies' logos or screenshots unless the owner supplies them. Leave a commented-out `testimonials` array in the data file for later.
 
@@ -268,7 +271,7 @@ Do not invent metrics, client logos, or testimonials. Do not use other companies
 ### 6.6 Projects (`#projects`)
 - Filter tabs: All · Web · Mobile · Automation (derive from the `category` field per project; a project with multiple categories appears under each).
 - Grid: featured cards span 2 columns on desktop.
-- With 20 cards, show the first 6 under "All" and a **Show more projects** button that reveals the rest. Filtered tabs show all matching projects.
+- With 23 cards, show the first 6 under "All" and a **Show more projects** button that reveals the rest. Filtered tabs show all matching projects. A card may list `details` under the summary.
 - Card hover: image zoom 1.05, show links.
 - Missing image → gradient placeholder with a lucide icon (no broken images).
 - Cards whose description is still `TODO` must render the placeholder visibly (styled, e.g. dashed border) so the owner spots them.
