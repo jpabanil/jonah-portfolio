@@ -159,13 +159,15 @@
     width: 2.5rem;
     height: 2.5rem;
     place-items: center;
-    border-radius: 0.8rem;
+    overflow: hidden;
+    border-radius: 999px;
     background: var(--accent);
     color: var(--on-accent);
     font-family: var(--font-display);
     font-size: 0.82rem;
     font-weight: 700;
     letter-spacing: -0.04em;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 65%, transparent);
   }
 
   .status-pill {

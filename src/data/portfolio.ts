@@ -165,10 +165,16 @@ export const portfolio: Portfolio = {
   ],
   experience: [
     {
+      company: 'Halloyi Automobile',
+      role: 'Backend Developer & Team Lead',
+      dates: 'Oct 2026 – Present',
+      bullets: ['Team leader and backend developer.'],
+    },
+    {
       company: 'Josh Bauer Team',
       role: 'Mobile/Web Developer',
       dates: 'Jan 2026 – Present',
-      bullets: ['TODO: 1–2 bullets on what Jonah built.'],
+      bullets: ['Created the Josh Bauer iOS app.', 'Created websites for clients.'],
     },
     {
       company: 'ENRG Inc.',
@@ -179,12 +185,6 @@ export const portfolio: Portfolio = {
         'Built and maintain the ENRG Flutter app; handle build automation and distribution (Firebase, Play Store, App Store).',
         'Building campaign automations (n8n, Make.com, Notion) that find business leads, send outreach, and book calls, surfaced in the superadmin and licensee dashboards.',
       ],
-    },
-    {
-      company: 'Halloyi Automobile',
-      role: 'Backend Developer & Team Lead',
-      dates: 'TODO dates – Present',
-      bullets: ['Voted team leader by a 3-person development team; owns backend development.'],
     },
     {
       company: 'Envoc',
@@ -222,7 +222,7 @@ export const portfolio: Portfolio = {
     {
       company: 'DocHQ',
       role: 'Mobile App Developer',
-      dates: 'TODO dates',
+      dates: 'Jan 2018 – Mar 2018',
       bullets: [
         'Mobile app development for DocHQ, a digital physiotherapy platform for muscle and joint care.',
         'Remote chartered physios, motion tracking, prevention plans, and fitness programs.',
@@ -230,7 +230,7 @@ export const portfolio: Portfolio = {
     },
     {
       company: 'FlexBooker',
-      role: 'TODO role',
+      role: 'iOS and Android App Developer',
       dates: 'Jan 2017 – Nov 2017',
       bullets: [
         'Online booking and scheduling software. Customers book from the website or phone, and the system confirms the appointment and sends email and text reminders.',

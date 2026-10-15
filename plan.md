@@ -135,14 +135,15 @@ Side card in About: photo (`/images/jonah.jpeg`, fallback to "JP" monogram gradi
 ### 4.5 Experience (vertical timeline, newest first)
 Dates and roles marked TODO must be filled in by the owner. Final order must be sorted by dates once the owner fills them in.
 
-1. **Josh Bauer Team** — Mobile/Web Developer · `Jan 2026 – Present`
-   - `TODO: 1–2 bullets on what Jonah built.`
-2. **ENRG Inc.** — Full-Stack & Mobile Developer (consulting) · `Jan 2026 – Present`
+1. **Halloyi Automobile** — Backend Developer & Team Lead · `Oct 2026 – Present`
+   - Team leader and backend developer.
+2. **Josh Bauer Team** — Mobile/Web Developer · `Jan 2026 – Present`
+   - Created the Josh Bauer iOS app.
+   - Created websites for clients.
+3. **ENRG Inc.** — Full-Stack & Mobile Developer (consulting) · `Jan 2026 – Present`
    - Migrated and modernized ENRG's systems: Laravel + Livewire web app, plus a Laravel + Next.js version.
    - Built and maintain the ENRG Flutter app; handle build automation and distribution (Firebase, Play Store, App Store).
    - Building campaign automations (n8n, Make.com, Notion) that find business leads, send outreach, and book calls, surfaced in the superadmin and licensee dashboards.
-3. **Halloyi Automobile** — Backend Developer & Team Lead · `TODO dates – Present`
-   - Voted team leader by a 3-person development team; owns backend development.
 4. **Envoc** — Mobile Developer (consulting) · `Jan 2026 – Present`
    - Builds native iOS (SwiftUI) and Android (Kotlin) applications.
    - Built FaceLock Authenticator, an iOS app for liveness-based MFA on Microsoft Entra ID, and FaceLock Reader, an iOS app that checks a FaceLock QR credential and the person’s face. FaceLock is an Envoc project, not a separate employer.
@@ -154,10 +155,10 @@ Dates and roles marked TODO must be filled in by the owner. Final order must be 
 7. **Cazamio** — iOS App Developer · `Dec 2017 – Jun 2018`
    - iOS development for Apply by Cazamio, a rental application app for New York City agents.
    - Tenants apply, upload documents, and pay for a credit report. The agent downloads a landlord-ready package at no cost.
-8. **DocHQ** — Mobile App Developer · `TODO dates`
+8. **DocHQ** — Mobile App Developer · `Jan 2018 – Mar 2018`
    - Mobile app development for DocHQ, a digital physiotherapy platform for muscle and joint care.
    - Remote chartered physios, motion tracking, prevention plans, and fitness programs.
-9. **FlexBooker** — `TODO role` · `Jan 2017 – Nov 2017`
+9. **FlexBooker** — iOS and Android App Developer · `Jan 2017 – Nov 2017`
    - Online booking and scheduling software. Customers book from the website or phone, and the system confirms the appointment and sends email and text reminders.
    - Booking pages, intake forms, waitlists, online payments, and calendar sync with Google, Microsoft 365, Outlook, and Apple.
 10. **Web2Application** — Developer · `Jun 2018 – May 2025`
@@ -243,7 +244,7 @@ Do not invent metrics, client logos, or testimonials. Do not use other companies
 
 ### 6.1 Navbar
 - Sticky, translucent with `backdrop-blur`, border appears after scrolling 10px.
-- Left: "JP" monogram logo → scrolls to top.
+- Left: profile photo (`/images/jonah.jpeg`, circular) → scrolls to top. Falls back to the "JP" monogram if the photo is missing.
 - Links: About · Skills · Experience · Projects · Contact. Active link highlighted via `useActiveSection`.
 - Right: theme toggle + "Hire me" button (scrolls to Contact).
 - Mobile: hamburger → full-width slide-down menu; closes on link click and on `Esc`.

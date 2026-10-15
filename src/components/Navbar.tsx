@@ -1,8 +1,9 @@
 import { Menu, Moon, Sun, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
+import { portfolio } from '../data/portfolio.ts'
 import { sections, useActiveSection } from '../hooks/useActiveSection.ts'
 import { useTheme } from '../hooks/useTheme.ts'
-import { cn } from '../lib/utils.ts'
+import { cn, mediaSrc } from '../lib/utils.ts'
 import { Button } from './ui/Button.tsx'
 
 const links = sections.filter((section) => section.id !== 'home')
@@ -10,6 +11,9 @@ const links = sections.filter((section) => section.id !== 'home')
 export function Navbar() {
   const active = useActiveSection()
   const { theme, toggleTheme } = useTheme()
+  const photo = mediaSrc(portfolio.photo)
+  const [photoFailed, setPhotoFailed] = useState(false)
+  const showPhoto = Boolean(photo) && !photoFailed
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
@@ -64,7 +68,19 @@ export function Navbar() {
       <div className="nav-bar" data-scrolled={scrolled ? 'true' : 'false'} data-open={open ? 'true' : 'false'}>
         <div className="container-page flex h-16 items-center justify-between gap-3">
           <a href="#home" className="monogram" aria-label="Jonah Pacas-Abanil, back to top">
-            JP
+            {showPhoto ? (
+              <img
+                src={photo}
+                alt=""
+                width={80}
+                height={80}
+                decoding="async"
+                className="size-full origin-center scale-[1.65] object-cover object-[center_36%]"
+                onError={() => setPhotoFailed(true)}
+              />
+            ) : (
+              'JP'
+            )}
           </a>
 
           <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
