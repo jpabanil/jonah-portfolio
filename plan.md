@@ -144,7 +144,7 @@ Dates and roles marked TODO must be filled in by the owner. Final order must be 
    - Migrated and modernized ENRG's systems: Laravel + Livewire web app, plus a Laravel + Next.js version.
    - Built and maintain the ENRG Flutter app; handle build automation and distribution (Firebase, Play Store, App Store).
    - Building campaign automations (n8n, Make.com, Notion) that find business leads, send outreach, and book calls, surfaced in the superadmin and licensee dashboards.
-4. **Envoc** — Mobile Developer (consulting) · `Jan 2026 – Present`
+4. **Envoc** — Mobile Developer (consulting) · `Jan 2026 – Oct 2026`
    - Builds native iOS (SwiftUI) and Android (Kotlin) applications.
    - Built FaceLock Authenticator, an iOS app for liveness-based MFA on Microsoft Entra ID, and FaceLock Reader, an iOS app that checks a FaceLock QR credential and the person’s face. FaceLock is an Envoc project, not a separate employer.
 5. **nSmarTrac LLC** — Full-Stack & Mobile Developer · `May 2020 – Nov 2025`

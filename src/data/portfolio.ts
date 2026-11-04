@@ -191,7 +191,7 @@ export const portfolio: Portfolio = {
     {
       company: 'Envoc',
       role: 'Mobile Developer (consulting)',
-      dates: 'Jan 2026 – Present',
+      dates: 'Jan 2026 – Oct 2026',
       bullets: [
         'Builds native iOS (SwiftUI) and Android (Kotlin) applications.',
         'Built FaceLock Authenticator, an iOS app for liveness-based MFA on Microsoft Entra ID, and FaceLock Reader, an iOS app that checks a FaceLock QR credential and the person’s face.',
