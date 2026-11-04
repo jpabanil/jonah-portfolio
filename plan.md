@@ -135,8 +135,8 @@ Side card in About: photo (`/images/jonah.jpeg`, fallback to "JP" monogram gradi
 ### 4.5 Experience (vertical timeline, newest first)
 Dates and roles marked TODO must be filled in by the owner. Final order must be sorted by dates once the owner fills them in.
 
-1. **Halloyi Automobile** — Backend Developer & Team Lead · `Oct 2026 – Present`
-   - Team leader and backend developer.
+1. **Elite ERP** — Full-Stack & Mobile Developer · `Oct 2026 – Present`
+   - Building the Elite Ace Trading business system: Laravel web desks and a Flutter app.
 2. **Josh Bauer Team** — Mobile/Web Developer · `Jan 2026 – Present`
    - Created the Josh Bauer iOS app.
    - Created websites for clients.
@@ -193,7 +193,7 @@ Each card: image (or gradient placeholder with icon), title, one-line problem/so
 20. **FaceLock Reader Android** — Android app that scans a FaceLock QR code and checks that the credential is genuine and the face matches, including offline. Tags: Android, QR, Biometrics. Category: mobile. Google Play: `https://play.google.com/store/apps/details?id=id.facelock.reader`.
 21. **Delivery, Food & Ride** *(in progress)* — On-demand app for motorcycle rides, parcels, restaurant food, and pabili. Customers and drivers use Flutter. Merchants and operators share one Laravel portal. Card details cover the four services, dispatch, live tracking, centavo fares, and the admin and merchant portals. The full card stays under 300 words. No public URL. Tags: Laravel, Inertia, React, MongoDB, Flutter. Category: web, mobile.
 22. **HRIS** *(in progress)* — Human resource system for Philippine employers that run more than one company, from hiring through payroll, separation, and year-end filings. Card details cover the 201 file, timekeeping, Philippine leave, payroll with separation of duties, BIR Form 2316, and final pay. The full card stays under 300 words. No public URL. Tags: Laravel, Next.js, MySQL, Redis. Category: web.
-23. **Elite ERP** *(in progress)* — Business system for Elite Ace Trading. One Laravel API and one MySQL database serve the web desks and a Flutter app. This phase covers CRM, sales, inventory, requisitions, people and payroll, projects, and chat. The finance ledger follows. The full card stays under 300 words. No public URL. Tags: Laravel, Livewire, Flutter, MySQL. Category: web, mobile.
+23. **Elite ERP** *(in progress)* — Business system for Elite Ace Trading. One Laravel API and one MySQL database serve the web desks and a Flutter app. This phase covers CRM, sales, inventory, requisitions, people and payroll, projects, and chat. The finance ledger follows. The full card stays under 300 words. Live: `http://3.25.59.17`. Tags: Laravel, Livewire, Flutter, MySQL. Category: web, mobile.
 
 Do not invent metrics, client logos, or testimonials. Do not use other companies' logos or screenshots unless the owner supplies them. Leave a commented-out `testimonials` array in the data file for later.
 

@@ -165,10 +165,12 @@ export const portfolio: Portfolio = {
   ],
   experience: [
     {
-      company: 'Halloyi Automobile',
-      role: 'Backend Developer & Team Lead',
+      company: 'Elite ERP',
+      role: 'Full-Stack & Mobile Developer',
       dates: 'Oct 2026 – Present',
-      bullets: ['Team leader and backend developer.'],
+      bullets: [
+        'Building the Elite Ace Trading business system: Laravel web desks and a Flutter app.',
+      ],
     },
     {
       company: 'Josh Bauer Team',
@@ -574,7 +576,7 @@ export const portfolio: Portfolio = {
       featured: false,
       inProgress: true,
       image: 'TODO: /images/projects/elite-erp.webp',
-      links: [],
+      links: [{ label: '3.25.59.17', href: 'http://3.25.59.17' }],
     },
   ],
   contact: {
