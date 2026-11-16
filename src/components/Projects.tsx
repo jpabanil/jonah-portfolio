@@ -7,6 +7,7 @@ import {
   GraduationCap,
   HeartPulse,
   IdCard,
+  Landmark,
   Languages,
   Layers,
   LockKeyhole,
@@ -38,7 +39,7 @@ const filters = [
 
 type FilterId = (typeof filters)[number]['id']
 
-const previewCount = 6
+const previewCount = 15
 
 const visuals: Record<string, { icon: typeof Layers; wash: string }> = {
   enrg: {
@@ -133,6 +134,10 @@ const visuals: Record<string, { icon: typeof Layers; wash: string }> = {
     icon: Building,
     wash: 'radial-gradient(circle at 24% 78%, rgba(212,175,55,0.4), transparent 48%), linear-gradient(160deg, #1c1917, #134e4a)',
   },
+  'loan-monitoring-system': {
+    icon: Landmark,
+    wash: 'radial-gradient(circle at 22% 24%, rgba(52,211,153,0.45), transparent 48%), linear-gradient(160deg, #052e16, #111827)',
+  },
 }
 
 function ProjectMedia({ project }: { project: Project }) {
@@ -209,7 +214,7 @@ export function Projects() {
       {visible.length === 0 ? (
         <p className="text-muted">No projects in this category yet.</p>
       ) : (
-        <ul id="project-grid" className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <ul id="project-grid" className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence initial={false}>
             {visible.map((project, index) => {
               const placeholder = isTodo(project.summary)
@@ -229,7 +234,7 @@ export function Projects() {
                       className="absolute inset-0 z-10 rounded-[inherit] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                     />
                   ) : null}
-                  <div className={project.featured ? 'md:grid md:grid-cols-2' : undefined}>
+                  <div>
                     <ProjectMedia project={project} />
                     <div className="p-6">
                       <div className="mb-3 flex flex-wrap gap-2">
@@ -241,6 +246,11 @@ export function Projects() {
                         {project.inProgress ? (
                           <span className="rounded-full border border-border px-2.5 py-1 text-xs font-medium text-muted">
                             In progress
+                          </span>
+                        ) : null}
+                        {project.finished ? (
+                          <span className="rounded-full border border-border px-2.5 py-1 text-xs font-medium text-muted">
+                            Finished
                           </span>
                         ) : null}
                         {project.categoryNote ? <Tag>{project.categoryNote}</Tag> : null}
@@ -294,7 +304,7 @@ export function Projects() {
               return (
                 <motion.li
                   key={project.id}
-                  className={project.featured ? 'min-w-0 md:col-span-2' : 'min-w-0'}
+                  className="min-w-0"
                   initial={reduced ? false : 'hidden'}
                   animate="shown"
                   exit="hidden"

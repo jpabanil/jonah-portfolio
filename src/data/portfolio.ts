@@ -36,6 +36,8 @@ export interface Project {
   categoryNote?: string
   featured: boolean
   inProgress: boolean
+  /** Shows a Finished label. Shipped client work leaves this unset. */
+  finished?: boolean
   /** Set to a path such as /images/projects/enrg.webp. TODO values render the gradient placeholder. */
   image: string
   links: ProjectLink[]
@@ -261,6 +263,43 @@ export const portfolio: Portfolio = {
     },
   ],
   projects: [
+    {
+      id: 'elite-erp',
+      title: 'Elite ERP',
+      summary:
+        'Business system for Elite Ace Trading. One Laravel API and one MySQL database serve the web desks and a Flutter app for Android and iOS. This phase covers CRM, sales, inventory, requisitions, people and payroll, projects, and chat. The finance ledger follows.',
+      details: [
+        'A company has branches and warehouses. People see only the companies they belong to. A sales officer sees only their own pipeline, clients, and invoices. The lead pool stays shared. Salary is limited to the employee, HR, payroll, and authorized finance roles.',
+        'CRM is a shared lead pool and a private 15-stage pipeline, with queues, appointments, and daily targets. Booking a lead opens the client and a draft proforma. Sales then takes a signature and records payment. Bookkeeper, Finance Head, and President approve that payment in order. A release order prints only when the invoice is approved, paid in full, and verified.',
+        'Inventory counts stock from movements and turns low items into a requisition. Requisitions pass approval, then a voucher and a disbursement. Payroll approval opens a funding request for the net pay. Project stages are owned by departments. Document numbers are never reused.',
+        'Chat, the approvals inbox, and email notices are in this phase. Management, finance, and HR use an authenticator at login. The phone covers leads, cash payments, approvals, stock lookup, leave, payslips, and chat.',
+      ],
+      tags: ['Laravel', 'Livewire', 'Flutter', 'MySQL'],
+      categories: ['web', 'mobile'],
+      featured: false,
+      inProgress: true,
+      image: 'TODO: /images/projects/elite-erp.webp',
+      links: [{ label: 'armoredcarsph.com', href: 'https://armoredcarsph.com' }],
+    },
+    {
+      id: 'loan-monitoring-system',
+      title: 'Loan Monitoring System',
+      summary:
+        'Lending system for a lending company. Members use a React Native app to see loans, balances, schedules, and payments, and to apply. Staff run applications, release, collections, and reports on a Next.js admin. One Fastify API and PostgreSQL keep the ledger.',
+      details: [
+        'The seats are member, loan officer, manager, cashier, auditor, and admin. The officer who encodes an application cannot approve it. The person who approves cannot release the loan. A cashier posts payments and prints receipts, and cannot waive a penalty or void a payment.',
+        'Money is stored as integer centavos. Disbursements, payments, interest, penalties, fees, waivers, and reversals are written only by the ledger service. The ledger only appends rows. A void writes a reversing entry. A nightly job recomputes balances from the ledger and alerts on a mismatch.',
+        'A loan product sets the interest method, rate, term, grace period, penalty, and the order a payment is applied. Each loan keeps the product version from release, so a later edit does not change it. The repayment schedule is created once, at disbursement.',
+        'Staff sign in with an authenticator. A member sees only their own loans. The admin covers members and KYC, applications, loan release, payments, overdue accounts, and reports.',
+      ],
+      tags: ['TypeScript', 'Fastify', 'PostgreSQL', 'Next.js', 'React Native'],
+      categories: ['web', 'mobile'],
+      featured: false,
+      inProgress: false,
+      finished: true,
+      image: 'TODO: /images/projects/loan-monitoring-system.webp',
+      links: [],
+    },
     {
       id: 'enrg',
       title: 'ENRG Platform Modernization',
@@ -502,7 +541,8 @@ export const portfolio: Portfolio = {
       tags: ['Laravel', 'Inertia', 'React', 'MongoDB', 'Flutter'],
       categories: ['web', 'mobile'],
       featured: false,
-      inProgress: true,
+      inProgress: false,
+      finished: true,
       image: 'TODO: /images/projects/school.webp',
       links: [],
     },
@@ -520,7 +560,8 @@ export const portfolio: Portfolio = {
       tags: ['Laravel', 'Livewire', 'MongoDB', 'Flutter'],
       categories: ['web', 'mobile'],
       featured: false,
-      inProgress: true,
+      inProgress: false,
+      finished: true,
       image: 'TODO: /images/projects/clinic.webp',
       links: [],
     },
@@ -556,27 +597,10 @@ export const portfolio: Portfolio = {
       tags: ['Python', 'React', 'MongoDB'],
       categories: ['web'],
       featured: false,
-      inProgress: true,
+      inProgress: false,
+      finished: true,
       image: 'TODO: /images/projects/hris.webp',
       links: [],
-    },
-    {
-      id: 'elite-erp',
-      title: 'Elite ERP',
-      summary:
-        'Business system for Elite Ace Trading. One Laravel API and one MySQL database serve the web desks and a Flutter app for Android and iOS. This phase covers CRM, sales, inventory, requisitions, people and payroll, projects, and chat. The finance ledger follows.',
-      details: [
-        'A company has branches and warehouses. People see only the companies they belong to. A sales officer sees only their own pipeline, clients, and invoices. The lead pool stays shared. Salary is limited to the employee, HR, payroll, and authorized finance roles.',
-        'CRM is a shared lead pool and a private 15-stage pipeline, with queues, appointments, and daily targets. Booking a lead opens the client and a draft proforma. Sales then takes a signature and records payment. Bookkeeper, Finance Head, and President approve that payment in order. A release order prints only when the invoice is approved, paid in full, and verified.',
-        'Inventory counts stock from movements and turns low items into a requisition. Requisitions pass approval, then a voucher and a disbursement. Payroll approval opens a funding request for the net pay. Project stages are owned by departments. Document numbers are never reused.',
-        'Chat, the approvals inbox, and email notices are in this phase. Management, finance, and HR use an authenticator at login. The phone covers leads, cash payments, approvals, stock lookup, leave, payslips, and chat.',
-      ],
-      tags: ['Laravel', 'Livewire', 'Flutter', 'MySQL'],
-      categories: ['web', 'mobile'],
-      featured: false,
-      inProgress: true,
-      image: 'TODO: /images/projects/elite-erp.webp',
-      links: [{ label: '3.25.59.17', href: 'http://3.25.59.17' }],
     },
   ],
   contact: {
