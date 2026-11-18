@@ -569,14 +569,14 @@ export const portfolio: Portfolio = {
       id: 'delivery-food-ride',
       title: 'Delivery, Food & Ride',
       summary:
-        'On-demand app for motorcycle rides, parcels, restaurant food, and pabili (buy it for me). Customers and drivers use Flutter. Merchants and operators share one React portal on Java Spring Boot and MySQL, with live dispatch and tracking.',
+        'On-demand app for motorcycle rides, parcels, restaurant food, and pabili (buy it for me). Customers and drivers use Flutter. Merchants and operators share one React portal on MongoDB, Express, and Node.js, with live dispatch and tracking.',
       details: [
         'A ride is one passenger on a motorcycle. A parcel is a pickup and drop-off, with optional cash collection. Food is one merchant per order, with options, a minimum, and a delivery radius. For pabili, the driver buys the shopping list and the customer pays the item cost plus fees in cash on arrival.',
         'Sign-in is a phone number and a one-time code, with consent for the Data Privacy Act and account deletion in the app. Dispatch offers the job to the nearest online driver, then the next driver after a timeout. A food order also waits for the merchant and uses a pickup code.',
         'The customer follows the trip live, can share a read-only link, and sees the driver name, photo, and plate. An SOS button alerts the admin map. Fares combine base, distance, waiting, night, and surge, and amounts are stored as centavos. Cash and a driver wallet settle the job on a ledger that only appends rows.',
-        'Admins approve drivers and merchants, set fare rules, service areas, and banned items, and handle payouts and reports. Merchants run the menu and incoming orders. Maps use Google Maps. Live updates use Spring WebSocket. GCash and Maya can be added later through a payment gateway.',
+        'Admins approve drivers and merchants, set fare rules, service areas, and banned items, and handle payouts and reports. Merchants run the menu and incoming orders. Maps use Google Maps. Live updates use Socket.IO. GCash and Maya can be added later through a payment gateway.',
       ],
-      tags: ['Java', 'Spring Boot', 'MySQL', 'React', 'Flutter'],
+      tags: ['MongoDB', 'Express', 'React', 'Node.js', 'Flutter'],
       categories: ['web', 'mobile'],
       featured: false,
       inProgress: true,
