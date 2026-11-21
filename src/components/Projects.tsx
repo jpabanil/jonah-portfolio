@@ -16,6 +16,7 @@ import {
   Shield,
   ShoppingBag,
   Smartphone,
+  Store,
   Stethoscope,
   Terminal,
   Workflow,
@@ -40,6 +41,83 @@ const filters = [
 type FilterId = (typeof filters)[number]['id']
 
 const previewCount = 15
+const descriptionWordLimit = 100
+
+function descriptionWords(project: Project): string[] {
+  return [project.summary, ...(project.details ?? [])]
+    .join(' ')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+}
+
+function ReadMoreButton({
+  expanded,
+  title,
+  onToggle,
+}: {
+  expanded: boolean
+  title: string
+  onToggle: () => void
+}) {
+  const label = expanded ? 'Show less' : 'Read more...'
+  return (
+    <button
+      type="button"
+      className="relative z-20 cursor-pointer text-sm font-semibold text-accent-text"
+      aria-expanded={expanded}
+      aria-label={`${label} about ${title}`}
+      onClick={onToggle}
+    >
+      {label}
+    </button>
+  )
+}
+
+function ProjectDescription({
+  project,
+  expanded,
+  onToggle,
+}: {
+  project: Project
+  expanded: boolean
+  onToggle: () => void
+}) {
+  const words = descriptionWords(project)
+  const truncated = words.length > descriptionWordLimit
+  const showFull = !truncated || expanded
+
+  if (!showFull) {
+    return (
+      <p className="mt-2 text-muted">
+        <TodoText value={words.slice(0, descriptionWordLimit).join(' ')} />{' '}
+        <ReadMoreButton expanded={false} title={project.title} onToggle={onToggle} />
+      </p>
+    )
+  }
+
+  return (
+    <>
+      <p className="mt-2 text-muted">
+        <TodoText value={project.summary} />
+      </p>
+      {project.details && project.details.length > 0 ? (
+        <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted">
+          {project.details.map((line) => (
+            <li key={line}>
+              <TodoText value={line} />
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {truncated ? (
+        <p className="mt-3">
+          <ReadMoreButton expanded title={project.title} onToggle={onToggle} />
+        </p>
+      ) : null}
+    </>
+  )
+}
 
 const visuals: Record<string, { icon: typeof Layers; wash: string }> = {
   enrg: {
@@ -134,6 +212,10 @@ const visuals: Record<string, { icon: typeof Layers; wash: string }> = {
     icon: Building,
     wash: 'radial-gradient(circle at 24% 78%, rgba(212,175,55,0.4), transparent 48%), linear-gradient(160deg, #1c1917, #134e4a)',
   },
+  renta: {
+    icon: Store,
+    wash: 'radial-gradient(circle at 78% 18%, rgba(1,138,103,0.5), transparent 48%), linear-gradient(160deg, #052e16, #111827)',
+  },
   'loan-monitoring-system': {
     icon: Landmark,
     wash: 'radial-gradient(circle at 22% 24%, rgba(52,211,153,0.45), transparent 48%), linear-gradient(160deg, #052e16, #111827)',
@@ -173,6 +255,7 @@ function ProjectMedia({ project }: { project: Project }) {
 export function Projects() {
   const [filter, setFilter] = useState<FilterId>('all')
   const [open, setOpen] = useState(false)
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({})
   const reduced = usePrefersReducedMotion()
   const matched = portfolio.projects.filter((project) =>
     filter === 'all' ? true : project.categories.includes(filter as ProjectCategory),
@@ -256,16 +339,13 @@ export function Projects() {
                         {project.categoryNote ? <Tag>{project.categoryNote}</Tag> : null}
                       </div>
                       <h3 className="text-xl font-semibold text-text">{project.title}</h3>
-                      <p className="mt-2 text-muted">
-                        <TodoText value={project.summary} />
-                      </p>
-                      {project.details && project.details.length > 0 ? (
-                        <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted">
-                          {project.details.map((line) => (
-                            <li key={line}>{line}</li>
-                          ))}
-                        </ul>
-                      ) : null}
+                      <ProjectDescription
+                        project={project}
+                        expanded={expanded[project.id] === true}
+                        onToggle={() =>
+                          setExpanded((current) => ({ ...current, [project.id]: !current[project.id] }))
+                        }
+                      />
                       <ul className="mt-4 flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
                           <li key={tag}>
