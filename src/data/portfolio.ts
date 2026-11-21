@@ -278,7 +278,7 @@ export const portfolio: Portfolio = {
       categories: ['web', 'mobile'],
       featured: false,
       inProgress: true,
-      image: 'TODO: /images/projects/elite-erp.webp',
+      image: '/images/projects/elite-erp.webp',
       links: [{ label: 'armoredcarsph.com', href: 'https://armoredcarsph.com' }],
     },
     {

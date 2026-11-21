@@ -22,7 +22,7 @@ Other scripts:
 Change text, links, jobs, and projects in `src/data/portfolio.ts` only. The page reads that file for every section.
 
 - A `TODO` string stays on the page as a dashed chip until you replace it. A project card whose summary still contains `TODO` also gets a dashed border.
-- Experience lists the first five roles until **Show all experience**. The All filter lists the first 15 of the 25 projects until **Show more projects**. Other project filters show every match. A project can list `details` under its summary. A description longer than 100 words shows the first 100 words and **Read more...**, which toggles the full summary and details. A project with `finished: true` shows a Finished label.
+- Experience lists the first five roles until **Show all experience**. The All filter lists the first 15 of the 25 projects until **Show more projects**. Other project filters show every match. A project can list `details` under its summary. A description longer than 50 words shows the first 50 words and **Read more...**, which toggles the full summary and details. A project with `finished: true` shows a Finished label.
 - The profile photo is `public/images/jonah.jpeg`, referenced as `/images/jonah.jpeg`.
 - Set `github` to a full `https://` URL to turn the icon into a link.
 - Set `image` on a project to a path such as `/images/projects/enrg.webp`. Until then the card shows a gradient and an icon.

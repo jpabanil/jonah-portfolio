@@ -41,7 +41,7 @@ const filters = [
 type FilterId = (typeof filters)[number]['id']
 
 const previewCount = 15
-const descriptionWordLimit = 100
+const descriptionWordLimit = 50
 
 function descriptionWords(project: Project): string[] {
   return [project.summary, ...(project.details ?? [])]
